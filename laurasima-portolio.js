@@ -112,10 +112,10 @@ let contentContainer = document.querySelector('.content-1')
 let galleryMessage = document.querySelector('p.gallery')
 
 let images = [
-    'pictures/laurasima/laurasima-5.jpeg',
-    'pictures/laurasima/laurasima-8.jpeg',
-    'pictures/laurasima/laurasima-4.jpeg',
-    'pictures/laurasima/laurasima.jpeg'
+    'pictures-full-size/laurasima/laurasima-5.jpeg',
+    'pictures-full-size/laurasima/laurasima-5.jpeg',
+    'pictures-full-size/laurasima/laurasima-4.jpeg',
+    'pictures-full-size/laurasima/laurasima.jpeg'
 ]
 
 function openOverlay() {

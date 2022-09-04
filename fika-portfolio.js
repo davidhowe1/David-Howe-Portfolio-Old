@@ -127,10 +127,10 @@ let contentContainer = document.querySelector('.content-1')
 let galleryMessage = document.querySelector('p.gallery')
 
 let images = [
-    "pictures/FIKA/fika-3.jpeg",
-    "pictures/FIKA/fika-4.jpeg",
-    "pictures/FIKA/fika-5.jpeg",
-    "pictures/FIKA/fika-6.jpeg"
+    "pictures-full-size/FIKA/fika-3.jpeg",
+    "pictures-full-size/FIKA/fika-4.jpeg",
+    "pictures-full-size/FIKA/fika-5.jpeg",
+    "pictures-full-size/FIKA/fika-6.jpeg"
 ]
 
 function openOverlay() {

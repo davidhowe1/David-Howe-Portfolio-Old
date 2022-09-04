@@ -103,10 +103,10 @@ let contentContainer = document.querySelector('.content-1')
 let galleryMessage = document.querySelector('p.gallery')
 
 let images = [
-    'pictures/slf-mastery/usman-3.jpeg',
-    'pictures/slf-mastery/usman-5.jpeg',
-    'pictures/slf-mastery/usman-4.jpeg',
-    'pictures/slf-mastery/usman-6.jpeg'
+    'pictures-full-size/slf-mastery/usman-3.jpeg',
+    'pictures-full-size/slf-mastery/usman-5.jpeg',
+    'pictures-full-size/slf-mastery/usman-4.jpeg',
+    'pictures-full-size/slf-mastery/usman-6.jpeg'
 ]
 
 function openOverlay() {
