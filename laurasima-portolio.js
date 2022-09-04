@@ -113,7 +113,7 @@ let galleryMessage = document.querySelector('p.gallery')
 
 let images = [
     'pictures-full-size/laurasima/laurasima-5.jpeg',
-    'pictures-full-size/laurasima/laurasima-5.jpeg',
+    'pictures-full-size/laurasima/laurasima-8.jpeg',
     'pictures-full-size/laurasima/laurasima-4.jpeg',
     'pictures-full-size/laurasima/laurasima.jpeg'
 ]
