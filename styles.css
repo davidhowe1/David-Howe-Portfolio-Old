@@ -522,6 +522,30 @@ img {
     background-color: transparent;
 }
 
+body#laurasima .visit-site {
+    padding: 8px;
+    text-align: center;
+    border: #161616 0.5px solid;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #161616;
+    background-color: #fbfbfb;
+    transition: all ease-in-out 0.2s;
+    margin: 20px 0px 20px 0px;
+}
+
+body#laurasima .visit-site:hover {
+    padding: 8px;
+    text-align: center;
+    border: #161616 0.5px solid;
+    font-size: 1.1rem;
+    font-weight: 300;
+    background-color: #161616;
+    color: #fbfbfb;
+    transition: all ease-in-out 0.2s;
+    margin: 20px 0px 20px 0px;
+}
+
 .button-container p {
     transform: rotate(180deg);
     font-size: 0.6rem;
@@ -611,22 +635,6 @@ a.back-btn:hover {
 
 .text-container h1 {
     font-size: 2.5rem;
-}
-
-button.visit-site {
-    border: 0.5px #2a2a2a solid;
-    text-decoration: none;
-    color: #2a2a2a;
-    padding: 10px 10px;
-    margin: 20px 0px;
-    cursor: pointer;
-    transition: all ease-in-out 0.2s;
-}
-
-button.visit-site:hover {
-    color: white;
-    background-color: #161616;
-    transition: all ease-in-out 0.2s;
 }
 
 .top-line .scroll-alert {
@@ -747,25 +755,36 @@ body#slf-mastery .page-menu h3 a:hover {
     cursor: pointer;
 }
 
-#slf-mastery button.visit-site {
-    background-color: #0d0d0d;
-    border: #FF9E04 solid 0.5px;
-    color: #FF9E04;
-    transition: all ease-in-out 0.2s;
-}
-
-#slf-mastery button.visit-site:hover {
-    background-color: #FF9E04;
-    color: #202020;
-    transition: all ease-in-out 0.2s;
-}
-
 body#slf-mastery img {
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 
 #slf-mastery.content-wrapper-2 a.back-btn {
     color: #FF9E04;
+}
+
+body#slf-mastery .visit-site {
+    padding: 8px;
+    text-align: center;
+    border: #FF9E04 0.5px solid;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #FF9E04;
+    background-color: #161616;
+    transition: all ease-in-out 0.2s;
+    margin: 20px 0px 20px 0px;
+}
+
+body#slf-mastery .visit-site:hover {
+    padding: 8px;
+    text-align: center;
+    border: #161616 0.5px solid;
+    font-size: 1.1rem;
+    font-weight: 300;
+    background-color: #FF9E04;
+    color: #161616;
+    transition: all ease-in-out 0.2s;
+    margin: 20px 0px 20px 0px;
 }
 
 /* Fika Page Styles */
@@ -782,20 +801,6 @@ body#fika.animated-fika {
 
 body#fika h1 {
     color: #545454;
-}
-
-#fika button.visit-site {
-    background-color: #161616;
-    border: #161616 solid 0.5px;
-    color: #eeebe7;
-    transition: all ease-in-out 0.2s;
-}
-
-#fika button.visit-site:hover {
-    background-color: #e57676;
-    color: #eeebe7;
-    border: transparent 0.5px solid;
-    transition: all ease-in-out 0.2s;
 }
 
 body#fika .button-container p {
@@ -816,6 +821,30 @@ body#fika img {
     border: transparent 0.5px solid;
     color: #ededed;
     transition: all ease 0.2s;
+}
+
+body#fika .visit-site {
+    padding: 8px;
+    text-align: center;
+    border: #161616 0.5px solid;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #fbfbfb;
+    background-color: #161616;
+    transition: all ease-in-out 0.2s;
+    margin: 20px 0px 20px 0px;
+}
+
+body#fika .visit-site:hover {
+    padding: 8px;
+    text-align: center;
+    border: #e57676 0.5px solid;
+    font-size: 1.1rem;
+    font-weight: 300;
+    background-color: #e57676;
+    color: #fbfbfb;
+    transition: all ease-in-out 0.2s;
+    margin: 20px 0px 20px 0px;
 }
 
 body#fika .page-menu {
@@ -1248,10 +1277,6 @@ body#fika .footer-wrapper {
         margin: 5px 0px;
     }
 
-    button.visit-site {
-        margin: 20px 0px;
-    }
-
     .page-menu {
         border-top: none;
         justify-content: flex-start;
@@ -1365,6 +1390,7 @@ body#fika .footer-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        width: 100%;
         box-sizing: border-box;
     }
 
@@ -1454,7 +1480,7 @@ body#fika .footer-wrapper {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 20px 10px;
+        padding: 20px 0px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     }
 
@@ -1598,10 +1624,6 @@ body#fika .footer-wrapper {
     
     #one.image-container::after {
         display: none;
-    }
-
-    button.visit-site {
-        padding: 7px;
     }
 
     .footer-wrapper {
