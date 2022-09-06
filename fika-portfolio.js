@@ -140,7 +140,7 @@ function openOverlay() {
     <div class="image-overlay">
         <div class="overlay-close">
             <button class="overlay-close">
-                <h1>&#10799</h1>
+                <h1>&#10005</h1>
             </button>
         </div>
 

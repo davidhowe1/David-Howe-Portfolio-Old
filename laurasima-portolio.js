@@ -1,6 +1,7 @@
 let backButton = document.getElementById('close-page')
 
 let pageElements = document.querySelectorAll('#element')
+console.log(pageElements)
 
 let a = document.querySelector('a.back-btn')
 let body = document.querySelector('body#laurasima')
@@ -125,7 +126,7 @@ function openOverlay() {
     <div class="image-overlay">
         <div class="overlay-close">
             <button class="overlay-close">
-                <h1>&#10799</h1>
+                <h1>&#10005</h1>
             </button>
         </div>
 

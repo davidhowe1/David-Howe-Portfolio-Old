@@ -673,6 +673,11 @@ a.back-btn:hover {
     opacity: 0;
 }
 
+#element.scroll-alert.hide {
+    transition: ease-in-out 0.4s;
+    opacity: 0;
+}
+
 /* Slf-Mastery Page Styles */
 
 body#slf-mastery {
@@ -960,7 +965,8 @@ button.overlay-close {
 }
 
 button.overlay-close h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    font-weight: 100;
     color: #0d0d0d;
 }
 
@@ -971,6 +977,18 @@ button.overlay-close h1 {
 .image-wrapper img.visible {
     opacity: 1;
     animation: fadeInAnimation 1.3s
+}
+
+body#laurasima .overlay-close h1 {
+    color: #c2c2c2;
+}
+
+body#slf-mastery .overlay-close h1 {
+    color: #FF9E04;
+}
+
+body#fika .overlay-close h1  {
+    color: #e57676;
 }
 
 /* Footer Styles */
@@ -1256,6 +1274,12 @@ body#fika .footer-wrapper {
         grid-row: 1;
     }
 
+    body#laurasima .right-side-container, 
+    body#slf-mastery .right-side-container, 
+    body#fika .right-side-container  {
+        border-right: none;
+    }
+
     .text-container {
         justify-content: space-between;
         padding: 0px;
@@ -1520,7 +1544,7 @@ body#fika .footer-wrapper {
     .mobile-menu-full {
         display: flex;
         flex-direction: column;
-        background-color: #eeebe7;
+        background-color: #ededed;
         opacity: 0;
         position: absolute;
         top: 0px;
