@@ -880,6 +880,10 @@ body#about {
     animation: fadeInAnimation ease 2s;
 }
 
+body#about h1.title {
+    font-size: 7.5vw;
+}
+
 body#about.animated {
     background-color: #ededed;
     animation: fadeBackgroundWhite 0.8s ease-in-out;
