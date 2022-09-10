@@ -1169,7 +1169,7 @@ body#fika .footer-wrapper {
 
 @media screen and (max-width: 1050px) {
     .text-container {
-        padding: 15px;
+        padding: 30px;
     }
 
     body#about .text-container {
