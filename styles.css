@@ -517,7 +517,7 @@ img {
     object-fit: contain;
     margin: 10px;
     height: 42vh;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
 
 .button-container {
@@ -768,10 +768,6 @@ body#slf-mastery .page-menu h3 a:hover {
     cursor: pointer;
 }
 
-body#slf-mastery img {
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-}
-
 #slf-mastery.content-wrapper-2 a.back-btn {
     color: #FF9E04;
 }
@@ -822,10 +818,6 @@ body#fika .button-container p {
 
 body#fika p {
     color: #202020;
-}
-
-body#fika img {
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 
 #fika button.back:hover > a.back-btn {
@@ -940,7 +932,6 @@ body#about .page-menu h3 {
     display: flex;
     align-items: center;
     height: 100%;
-    column-gap: 50px;
     overflow-x: scroll;
     padding: 0px 50px;
 }
@@ -948,14 +939,24 @@ body#about .page-menu h3 {
 .image-wrapper img.desktop {
     height: 80vh;
     object-fit: contain;
+    margin: 0px 0px 0px 25px;
 }
 
 .image-wrapper img.tablet {
     height: 80vh;
+    margin: 0px 25px;
 }
 
-.image-wrapper img.mobile {
+.image-wrapper :nth-child(1) {
     height: 80vh;
+    margin: 0px 25px 0px 0px;
+
+}
+
+.image-wrapper :nth-child(2) {
+    height: 80vh;
+    margin: 0px 25px;
+
 }
 
 .overlay-close {
