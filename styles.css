@@ -23,6 +23,10 @@ body {
     overflow-y: scroll;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 body.animated-laurasima {
     background-color: #fbfbfb;
     animation: fadeBackgroundLaurasima 0.8s ease-in-out;
@@ -425,9 +429,13 @@ body#about.animated-slf-mastery {
     padding: 0px 0px 30px 0px;
     box-sizing: border-box;
     border-right: 0.5px solid #2a2a2a;
-    overflow: scroll;
+    overflow-y: scroll;
     transition: ease-in-out 0.5s;
     opacity: 1;
+}
+
+.right-side-container::-webkit-scrollbar {
+    display: none;
 }
 
 @keyframes imageContainerFadeIn {
@@ -1067,7 +1075,7 @@ body#fika .footer-wrapper {
 
 /* Responsive Styles */
 
-@media screen and (max-width: 1227px) {
+@media screen and (max-width: 1430px) {
 
     #one.image-container::before {
         position: absolute;
@@ -1099,25 +1107,25 @@ body#fika .footer-wrapper {
     }
 
     #one.image-container :nth-child(1) {
-        width: 38.5%;
-        height: auto;
+        max-width: 50%;
+        max-height: 45vh;
     }
 
     #one.image-container :nth-child(2) {
-        width: 38.5%;
-        height: auto;
+        max-width: 50%;
+        max-height: 45vh;
     }
 
 
     #one.image-container :nth-child(3) {
-        width: 80%;
-        height: auto;
+        max-width: 100%;
+        height: 60vh;
         margin: 10px 10px;
     }
 
     #one.image-container :nth-child(4) {
-        width: 80%;
-        height: auto;
+        max-width: 80%;
+        height: 24vh;
     }
 
     .content-1 {
@@ -1168,8 +1176,6 @@ body#fika .footer-wrapper {
         grid-template-rows: 90% 10%;
         padding: 0px 15px;
     }
-
-
 }
 
 /* Ipad Styles */
@@ -1272,6 +1278,8 @@ body#fika .footer-wrapper {
         border-right: none;
         grid-column: 2/5;
         grid-row: 1;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 
     body#laurasima .right-side-container, 
@@ -1631,19 +1639,26 @@ body#fika .footer-wrapper {
     }
 
     #one.image-container :nth-child(1) {
-        width: 40%;
+        width: auto;
+        height: auto;
+        max-width: 37.5%;
     }
 
     #one.image-container :nth-child(2) {
-        width: 40%;
+        width: auto;
+        height: auto;
+        max-width: 37.5%;
     }
 
     #one.image-container :nth-child(3) {
-        width: 85%;
+        height: auto;
+        width: auto;
+        max-width: 80%;
     }
 
     #one.image-container :nth-child(4) {
-        width: 85%;
+        width: auto;
+        height: auto;
     }
     
     #one.image-container::after {
