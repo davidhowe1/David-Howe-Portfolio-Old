@@ -1033,14 +1033,32 @@ button.overlay-close h1 {
 
 body#laurasima .overlay-close h1 {
     color: #c2c2c2;
+    transition: all ease-in-out 0.2s;
+}
+
+body#laurasima .overlay-close h1:hover {
+    color: #fbfbfb;
+    transition: all ease-in-out 0.2s;
 }
 
 body#slf-mastery .overlay-close h1 {
     color: #FF9E04;
+    transition: all ease-in-out 0.2s;
+}
+
+body#slf-mastery .overlay-close h1:hover {
+    color: #ffdca3;
+    transition: all ease-in-out 0.2s;
 }
 
 body#fika .overlay-close h1  {
     color: #e57676;
+    transition: all ease-in-out 0.2s;
+}
+
+body#fika .overlay-close h1:hover  {
+    color: #eeb0b0;
+    transition: all ease-in-out 0.2s;
 }
 
 /* Footer Styles */
