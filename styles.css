@@ -21,10 +21,8 @@ body {
     margin: 0px;
     padding: 0px;
     overflow-y: scroll;
-}
-
-body::-webkit-scrollbar {
-    display: none;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(26, 26, 26);
 }
 
 body.animated-laurasima {
@@ -63,14 +61,12 @@ body.animated-fika {
     width: 60%;
     flex-direction: row;
     justify-content: space-between;
-    border-top: #2a2a2a solid 0.5px;
     border-bottom: #2a2a2a solid 0.5px;
     transition: ease-in-out 0.5s;
 }
 
 .menu-items.hidden {
     transition: all ease-in-out 0.5s;
-    border-top: solid transparent 1px;
     border-bottom: solid transparent 1px;
 }
 
@@ -229,7 +225,7 @@ body#laurasima.animated-laurasima {
     }
 
     100% {
-        background-color: #161616;
+        background-color: #1a1a1a;
     }
 }
 
@@ -254,14 +250,14 @@ body#laurasima.animated-laurasima {
     }
 
     100% {
-        background-color: #161616;
+        background-color: #1a1a1a;
     }
 }
 
 @keyframes fadeBackgroundWhite {
     
     0% {
-        background-color: #161616;
+        background-color: #1a1a1a;
     }
 
     100% {
@@ -272,7 +268,7 @@ body#laurasima.animated-laurasima {
 @keyframes fadeBackgroundSlf-Laur {
     
     0% {
-        background-color: #161616;
+        background-color: #1a1a1a;
     }
 
     100% {
@@ -283,7 +279,7 @@ body#laurasima.animated-laurasima {
 @keyframes fadeBackgroundSlf-Fika {
     
     0% {
-        background-color: #161616;
+        background-color: #1a1a1a;
     }
 
     100% {
@@ -322,7 +318,7 @@ body#laurasima.animated-laurasima {
     }
 
     100% {
-        background-color: #161616;
+        background-color: #1a1a1a;
     }
 }
 
@@ -340,7 +336,7 @@ body#laurasima.animated-laurasima {
 /* Animation styles for background changes (Page Menus) */
 
 body#laurasima.animated-laurasima.animated-slf-mastery {
-    background-color: #161616;
+    background-color: #1a1a1a;
     animation: fadeBackgroundBlack ease-in-out 0.65s;
 }
 
@@ -365,7 +361,7 @@ body#fika.animated-fika.animated-laurasima {
 }
 
 body#fika.animated-fika.animated-slf-mastery {
-    background-color: #161616;
+    background-color: #1a1a1a;
     animation: fadeBackgroundFika-Slf ease-in-out 0.65s;
 }
 
@@ -382,15 +378,15 @@ body#about.animated-laurasima {
 }
 
 body#about.animated-slf-mastery {
-    background-color: #161616;
+    background-color: #1a1a1a;
     animation: fadeBackgroundBlack ease-in-out 0.8s;
 }
 
 /* End of Animations and Keyframes */
 
 .content-wrapper-2 {
-    display: block;
-    height: 90vh;
+    display: flex;
+    height: 100%;
 }
 
 .content-1 {
@@ -407,16 +403,17 @@ body#about.animated-slf-mastery {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    border-right: #2a2a2a solid 0.5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     height: 100%;
+    width: 100%;
     transition: ease-in-out 0.5s;
 }
 
 .left-side-title > h1.title {
-    font-size: 7.7vw;
+    font-size: 6vw;
+    margin-top: 2vw;
     font-family: 'Fjalla One', sans-serif;
     transform: rotate(-180deg);
-    width: 8vw;
     writing-mode: vertical-rl;
     text-align: center;
 }
@@ -426,12 +423,13 @@ body#about.animated-slf-mastery {
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
-    padding: 0px 0px 30px 0px;
+    padding: 20px 0px 30px 0px;
     box-sizing: border-box;
-    border-right: 0.5px solid #2a2a2a;
     overflow-y: scroll;
     transition: ease-in-out 0.5s;
     opacity: 1;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(49, 49, 49);
 }
 
 .right-side-container::-webkit-scrollbar {
@@ -465,45 +463,41 @@ body#about.animated-slf-mastery {
     min-height: 80vh;
     margin: 0px 0px 25px 0px;
     opacity: 1;
+    cursor: zoom-in;
 }
 
 #one.image-container::before {
     position: absolute;
     display: flex;
-    height: 90vh;
+    height: 100vh;
     width: 55vw;
-    top: 1.8vh;
+    top: 0vh;
     left: 13vw;
-    background: rgb(42, 42, 42, 0.00);
+    background: rgba(26, 26, 26, 0);
     content: '';
     transition: all ease-in-out 0.15s;
     cursor: zoom-in;
 }
 
 #one.image-container:hover::before {
-    background: rgb(42, 42, 42, 0.80);
+    background: rgba(26, 26, 26, 0.9);
     transition: all ease-in-out 0.15s;
 }
 
 #one.image-container:hover::after {
-    content: 'Click for Gallery View';
+    content: 'Click Here for Gallery View';
     position: absolute;
-    top: 6vh;
+    top: 6.6vh;
     left: 16vw;
     color: #fbfbfb;
     font-size: 2rem;
     font-weight: 300;
+    overflow: hidden;
     animation: imageContainerFadeIn 0.15s;
 }
 
 #one.image-container :nth-child(3) {
     margin: 10px;
-}
-
-#two.image-container {
-    display: flex;
-    justify-content: center;
-    object-fit: contain;
 }
 
 .image-container {
@@ -517,7 +511,7 @@ img {
     object-fit: contain;
     margin: 10px;
     height: 42vh;
-    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
 
 .button-container {
@@ -563,27 +557,38 @@ body#laurasima .visit-site:hover {
 button.back {
     opacity: 1;
     border: none;
-    padding-bottom: 5px;
     background-color: transparent;
     cursor: pointer;
     transform: rotate(-90deg);
+    -moz-transform: rotate(180deg);
 }
 
 a.back-btn {
     color: #545454;
     background-color: transparent;
-    padding: 0px 5px 1px 5px;
+    border: 0.5px solid #787878;
     font-size: 1rem;
+    padding: 1px 5px;
     font-weight: 300;
     text-decoration: none;
-    border: 0.5px solid #202020;
     transition: all ease 0.2s;
 }
 
 a.back-btn:hover {
     background-color: #202020;
     color: #eeebe7;
+    padding: 1px 5px;
     transition: all ease 0.2s;
+}
+
+@supports (-moz-appearance:none) {
+    a.back-btn {
+        padding: 5px 3px;
+    }
+    
+    a.back-btn:hover {
+        padding: 5px 3px;
+    }
 }
 
 .text-container {
@@ -591,7 +596,8 @@ a.back-btn:hover {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding: 0px 45px;
+    padding: 0px 45px 0px 45px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 #about .text-container {
@@ -605,7 +611,7 @@ a.back-btn:hover {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    border-bottom: 0.5px solid #2a2a2a;
+    margin: 20px 0px 0px 0px;
 }
 
 .page-menu p.gallery {
@@ -626,6 +632,7 @@ a.back-btn:hover {
     padding: 4px 6px;
     font-weight: 300;
     transition: all ease-in-out 0.2s;
+    border: solid 0.5px #949494;
 }
 
 .page-menu h3 a:hover {
@@ -689,8 +696,29 @@ a.back-btn:hover {
 /* Slf-Mastery Page Styles */
 
 body#slf-mastery {
-    background-color: #161616;
+    background-color: #1a1a1a;
     animation: fadeInAnimation ease 2s;
+}
+
+body#slf-mastery img {
+    box-shadow: rgba(0, 0, 0, 0.23) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+body#slf-mastery .right-side-container::-webkit-scrollbar {
+    display: flex;
+    width: 4px;
+}
+
+body#slf-mastery .right-side-container::-webkit-scrollbar-track {
+    box-shadow: none;
+}
+
+body#slf-mastery .right-side-container::-webkit-scrollbar-thumb {
+    background: rgb(60, 60, 60);
+}
+
+body#slf-mastery .mobile-title {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 24px;
 }
 
 body#slf-mastery.animated {
@@ -699,7 +727,7 @@ body#slf-mastery.animated {
 }
 
 h1#slf-mastery {
-    font-size: 6.6vw;
+    font-size: 5vw;
     color: #FF9E04;
 }
 
@@ -724,25 +752,28 @@ body#slf-mastery h3 {
 }
 
 body#slf-mastery .right-side-container {
-    border-right: 0.5px solid #545454;
+    border-right: none;
 }
 
 body#slf-mastery .left-side-title {
-    border-right: 0.5px solid #545454;
+    box-shadow: rgba(0, 0, 0, 0.30) 0px 8px 24px;
+}
+
+body#slf-mastery .text-container {
+    box-shadow: rgba(0, 0, 0, 0.30) 0px 8px 24px;
 }
 
 #slf-mastery button.back {
     color: #787878;
-    border-bottom: none;
+    padding: 0px 5px 1px 5px;
 }
 
 #slf-mastery button.back > a.back-btn {
-    border: 0.5px solid #FF9E04;
+    border: 0.5px solid #8b5500;
 }
 
 #slf-mastery button.back:hover > a.back-btn {
     background-color: #FF9E04;
-    padding: 0px 5px 1px 5px;
     color: #202020;
     transition: all ease 0.3s;
 }
@@ -752,13 +783,13 @@ body#slf-mastery .page-menu {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    border-bottom: 0.5px solid #545454;
 }
 
 body#slf-mastery .page-menu h3 a {
     font-size: 1.1rem;
     padding: 4px 6px;
     color: #FF9E04;
+    border: 0.5px solid #8b5500;
 }
 
 body#slf-mastery .page-menu h3 a:hover {
@@ -822,7 +853,6 @@ body#fika p {
 
 #fika button.back:hover > a.back-btn {
     background-color: #e57676;
-    padding: 0px 5px 1px 5px;
     border: transparent 0.5px solid;
     color: #ededed;
     transition: all ease 0.2s;
@@ -857,7 +887,6 @@ body#fika .page-menu {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    border-bottom: 0.5px solid #545454;
 }
 
 body#fika .page-menu h3 a {
@@ -869,6 +898,7 @@ body#fika .page-menu h3 a {
 body#fika .page-menu h3 a:hover {
     background-color: #e57676;
     color: #ededed;
+    border: #e57676 0.5px solid;
     transition: all ease-in-out 0.2s;
     cursor: pointer;
 }
@@ -881,7 +911,7 @@ body#about {
 }
 
 body#about h1.title {
-    font-size: 7.5vw;
+    font-size: 5vw;
 }
 
 body#about.animated {
@@ -892,6 +922,8 @@ body#about.animated {
 body#about .text-container {
     grid-template-rows: 90% 10%;
     padding: 0px 20px;
+    box-shadow: none;
+    height: 100%;
 }
 
 body#about .content-1 {
@@ -935,9 +967,8 @@ body#about .page-menu h3 {
 .image-wrapper {
     display: flex;
     align-items: center;
-    height: 100%;
     overflow-x: scroll;
-    padding: 0px 50px;
+    padding: 10px 50px 40px 50px;
 }
 
 .image-wrapper img.desktop {
@@ -967,19 +998,27 @@ body#about .page-menu h3 {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    height: 0px;
-    padding: 0px 10px;
+    height: 85px;
+    width: 100%;
 }
 
 button.overlay-close {
+    display: flex;
+    justify-content: center;
     cursor: pointer;
     background-color: transparent;
     border: none;
+    border-radius: 120px;
+    transition: all ease-in-out 0.2s;
+    height: 85px;
+    width: 85px;
 }
 
 button.overlay-close h1 {
     font-size: 3.5rem;
     font-weight: 100;
+    height: 100%;
+    width: 100%;
     color: #0d0d0d;
 }
 
@@ -1013,7 +1052,6 @@ footer {
     justify-content: center;
     padding: 0px 0px;
     z-index: 1;
-    
 }
 
 .footer-wrapper {
@@ -1021,11 +1059,11 @@ footer {
     opacity: 1;
     flex-direction: row;
     justify-content: space-between;
-    border-top: 0.5px #2a2a2a solid;
-    width: 98%;
+    width: 100%;
     align-items: flex-end;
-    padding: 20px 0px;
-    animation: fadeInAnimation ease-in-out 0.5s ;
+    padding: 20px 20px;
+    animation: fadeInAnimation ease-in-out 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
 
 body#laurasima .footer-wrapper {
@@ -1057,15 +1095,16 @@ body#laurasima .footer-wrapper {
 /* Slf-Mastery footer styles */
 
 body#slf-mastery .footer-wrapper {
-    background-color: #161616;
+    background-color: #1a1a1a;
 }
 
-body#slf-mastery footer .footer-wrapper h2 {
-    color: #c2c2c2;
+body#slf-mastery footer .footer-wrapper h2,
+body#slf-mastery footer .footer-wrapper h3 a {
+    color: #FF9E04;
 }
 
 body#slf-mastery .footer-wrapper {
-    border-top: 0.5px solid #545454;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px;
 }
 
 body#slf-mastery .footer-wrapper h3 a {
@@ -1082,31 +1121,44 @@ body#fika .footer-wrapper {
 
 @media screen and (max-width: 1430px) {
 
+    .right-side-container::-webkit-scrollbar {
+        display: flex;
+        width: 4px;
+    }
+
+    .right-side-container::-webkit-scrollbar-track {
+        box-shadow: none;
+    }
+
+    .right-side-container::-webkit-scrollbar-thumb {
+        background: rgb(213, 213, 213);
+    }
+
     #one.image-container::before {
         position: absolute;
         display: flex;
-        height: 90vh;
+        height: 100vh;
         width: 55vw;
-        top: 1.8vh;
+        top: 0vh;
         left: 15vw;
-        background: rgb(42, 42, 42, 0.00);
+        background: rgb(26, 26, 26, 0.00);
         content: '';
         transition: all ease-in-out 0.15s;
         cursor: zoom-in;
     }
     
     #one.image-container:hover::before {
-        background: rgb(42, 42, 42, 0.80);
+        background: rgb(26, 26, 26, 0.90);
         transition: all ease-in-out 0.15s;
     }
     
     #one.image-container:hover::after {
-        content: 'Click for Gallery View';
+        content: 'Click Here for Gallery View';
         position: absolute;
         top: 6vh;
-        left: 16vw;
+        left: 18vw;
         color: #fbfbfb;
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-weight: 300;
         animation: imageContainerFadeIn 0.15s;
     }
@@ -1173,6 +1225,7 @@ body#fika .footer-wrapper {
 }
 
 @media screen and (max-width: 1050px) {
+
     .text-container {
         padding: 30px;
     }
@@ -1183,9 +1236,21 @@ body#fika .footer-wrapper {
     }
 }
 
-/* Ipad Styles */
+/* Tablet Styles */
 
 @media screen and (max-width: 850px) {
+
+        .right-side-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .right-side-container::-webkit-scrollbar-track {
+        display: none;    
+    }
+
+    .right-side-container::-webkit-scrollbar-thumb {
+        display: none;
+    }
 
     .menu-items {
         width: 80%;
@@ -1198,6 +1263,10 @@ body#fika .footer-wrapper {
 
     .left-side-title {
         grid-row: 1/4;
+    }
+
+    .left-side-title h1 {
+        margin-right: 3px;
     }
 
     .button-container {
@@ -1225,6 +1294,7 @@ body#fika .footer-wrapper {
     .scroll-alert {
         display: flex;
         opacity: 1;
+        margin-top: 10px;
     }
 
     .scroll-alert.hidden {
@@ -1285,6 +1355,7 @@ body#fika .footer-wrapper {
         grid-row: 1;
         overflow-y: scroll;
         overflow-x: hidden;
+        padding: 0px;
     }
 
     body#laurasima .right-side-container, 
@@ -1293,12 +1364,18 @@ body#fika .footer-wrapper {
         border-right: none;
     }
 
+    body#slf-mastery .text-container {
+        border-top: #2d2d2d solid 0.5px;
+        box-shadow: none;
+    }
+
     .text-container {
         justify-content: space-between;
-        padding: 0px;
+        padding: 0px 40px 0px 40px;
         grid-row: 2/5;
-        width: 80vw;
-        border-top: 0.5px solid #2a2a2a;
+        grid-column: 2/5;
+        box-shadow: none;
+        border-top: solid 0.5px #dbdbdb;
     }
 
     .text-container h1 {
@@ -1344,12 +1421,10 @@ body#fika .footer-wrapper {
 
     .page-menu h3 {
         margin: 0px 10px;
-        border: 0.5px solid #2a2a2a;
     }
 
     body#slf-mastery .page-menu {
         justify-content: flex-start;
-        border-top: 1px solid #545454;
         height: 20px;
         padding: 10px 0px;
         border-bottom: none;
@@ -1417,6 +1492,10 @@ body#fika .footer-wrapper {
     body#about .text-body p {
         margin: 20px 0px;
     }
+
+    body#about #element.mobile-title h1.title {
+        font-size: 1.6rem;
+    }
 }
 
 /* Mobile Styles */
@@ -1475,6 +1554,9 @@ body#fika .footer-wrapper {
     body#about .text-container {
         grid-row: auto;
         margin: 15px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     body#about .page-menu {
@@ -1633,8 +1715,12 @@ body#fika .footer-wrapper {
         justify-content: center;
         height: 40%;
         width: 90%;
-        border-top: #787878 solid 0.5px;
+        border-top: solid 0.5px #dbdbdb;
         z-index: 1;
+    }
+
+    body#slf-mastery .text-container {
+        border-top: solid 0.5px #2a2a2a;
     }
 
     #one.image-container {
@@ -1671,8 +1757,8 @@ body#fika .footer-wrapper {
     }
 
     .footer-wrapper {
-        width: 93%;
-        padding: 10px 0px;
+        width: 100%;
+        padding: 10px 10px;
     }
 
     .page-menu {
@@ -1721,5 +1807,4 @@ body#fika .footer-wrapper {
     .menu-item h1 a {
         font-size: 1rem;
     }
-    
 }

@@ -145,10 +145,10 @@ function openOverlay() {
         </div>
 
         <div class="image-wrapper">
-            <img class="mobile" src="${images[0]}" alt="">
-            <img class="mobile" src="${images[1]}" alt="">
-            <img class="tablet" src="${images[2]}" alt="">
-            <img class="desktop" src="${images[3]}" alt="">
+            <img class="mobile" src="${images[0]}" alt="Mobile merch page screenshot">
+            <img class="mobile" src="${images[1]}" alt="Mobile about page screenshot">
+            <img class="tablet" src="${images[2]}" alt="Tablet merch and cart page screenshot">
+            <img class="desktop" src="${images[3]}" alt="Desktop home page screenshot">
         </div>
     </div>
     `
@@ -159,7 +159,7 @@ imageContainer.addEventListener('click', function() {
     openOverlay()
     ready()
     removeGalleryMessage()
-    setTimeout(fadeInImages, 600)
+    setTimeout(fadeInImages, 900)
 })
 
 function removeGalleryMessage() {
@@ -176,7 +176,7 @@ function fadeInImages() {
     function loadImages(i) {
         setTimeout(function() {
         imagesArray[i].classList.add('visible')
-    }, 250 * i)
+    }, 400 * i)
 }
 }
 
