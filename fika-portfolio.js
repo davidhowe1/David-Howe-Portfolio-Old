@@ -52,7 +52,7 @@ aboutLink.addEventListener('click', (e) => {
     let link = e.target.href
 
     fadeOutContent()
-    setTimeout(fadeInBackgroundLaurasima, 300)
+    setTimeout(fadeInBackgroundWhite, 300)
 
     setTimeout(function() {
         window.open(link, '_self')
