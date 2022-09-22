@@ -1769,6 +1769,7 @@ body#fika .footer-wrapper {
     #one.image-container :nth-child(4) {
         width: auto;
         height: auto;
+        max-width: 80%;
     }
     
     #one.image-container::after {
