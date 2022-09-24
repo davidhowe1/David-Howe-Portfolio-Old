@@ -9,19 +9,12 @@ let fikaLink = document.querySelectorAll('a.fika')
 let about = document.getElementById('about')
 let home = document.querySelector('a.home')
 let loadingScreen = document.querySelector('#laurasima.loading-screen')
-let pictures = document.querySelectorAll('img')
+let pictures = document.getElementsByTagName('img')
+console.log(loadingScreen)
 
-for (let i = 0; i < pictures.length; i++) {
-    function removeLoadingScreen() {
-        loadingScreen.remove()
-    }
-
-    if ( document.readyState === 'complete') {
-        removeLoadingScreen()
-    } else {
-        pictures[i].addEventListener('load', removeLoadingScreen())
-    }
-}
+window.addEventListener('load', function() {
+    loadingScreen.classList.add('hidden')
+})
 
 function fadeOutContent() {
     fadeOnClick()

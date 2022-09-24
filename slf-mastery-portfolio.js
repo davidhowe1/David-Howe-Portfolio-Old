@@ -8,20 +8,12 @@ let laurasimaLink = document.querySelectorAll('a.laurasima')
 let fikaLink = document.querySelectorAll('a.fika')
 let about = document.getElementById('about')
 let home = document.querySelector('a.home')
-let loadingScreen = document.querySelector('#slf-mastery.loading-screen.visible')
+let loadingScreen = document.querySelector('#slf-mastery.loading-screen')
 let pictures = document.querySelectorAll('img')
 
-for (let i = 0; i < pictures.length; i++) {
-    function removeLoadingScreen() {
-        loadingScreen.remove()
-    }
-
-    if ( document.readyState === 'complete') {
-        removeLoadingScreen()
-    } else {
-        pictures[i].addEventListener('load', removeLoadingScreen())
-    }
-}
+window.addEventListener('load', function() {
+    loadingScreen.classList.add('hidden')
+})
 
 function fadeOutContent() {
     fadeOnClick()

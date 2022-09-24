@@ -163,7 +163,7 @@ p {
 
 /* Laurasima Styles */
 
-#laurasima.loading-screen.visible {
+#laurasima.loading-screen {
     display: flex;
     position: absolute;
     justify-content: center;
@@ -175,24 +175,27 @@ p {
     z-index: 900;
     opacity: 1;
     background-color: #fbfbfb;
-    transition: ease-out all 0.6s
 }
 
-#laurasima.loading-screen {
+#laurasima.loading-screen.hidden {
     display: flex;
     position: absolute;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -900;
-    opacity: 0;    transition: ease-out all 0.6s
+    opacity: 0;
+    background-color: transparent;
+    transition: ease-in all 0.3s;
 }
 
 #laurasima.loader {
     width: 48px;
     height: 48px;
-    border: 5px solid #161616;
+    border: 2px solid #161616;
     border-bottom-color: transparent;
     border-radius: 50%;
     display: inline-block;
@@ -743,7 +746,7 @@ a.back-btn:hover {
 
 /* Slf-Mastery Page Styles */
 
-#slf-mastery.loading-screen.visible {
+#slf-mastery.loading-screen {
     display: flex;
     position: absolute;
     justify-content: center;
@@ -755,25 +758,27 @@ a.back-btn:hover {
     z-index: 900;
     opacity: 1;
     background-color: #161616;
-    transition: ease-out all 0.6s
 }
 
-#slf-mastery.loading-screen {
+#slf-mastery.loading-screen.hidden {
     display: flex;
     position: absolute;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -900;
     opacity: 0;
-    transition: ease-out all 0.6s
+    background-color: transparent;
+    transition: ease-in all 0.3s;
 }
 
 #slf-mastery.loader {
     width: 48px;
     height: 48px;
-    border: 5px solid #FF9E04;
+    border: 2px solid #FF9E04;
     border-bottom-color: transparent;
     border-radius: 50%;
     display: inline-block;
@@ -915,7 +920,7 @@ body#slf-mastery .visit-site:hover {
 
 /* Fika Page Styles */
 
-#fika.loading-screen.visible {
+#fika.loading-screen {
     display: flex;
     position: absolute;
     justify-content: center;
@@ -927,25 +932,27 @@ body#slf-mastery .visit-site:hover {
     z-index: 900;
     opacity: 1;
     background-color: #eeebe7;
-    transition: ease-out all 0.6s
 }
 
-#fika.loading-screen {
+#fika.loading-screen.hidden {
     display: flex;
     position: absolute;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -900;
     opacity: 0;
-    transition: ease-out all 0.6s
+    background-color: transparent;
+    transition: ease-in all 0.3s;
 }
 
 #fika.loader {
     width: 48px;
     height: 48px;
-    border: 5px solid #e57676;
+    border: 2px solid #e57676;
     border-bottom-color: transparent;
     border-radius: 50%;
     display: inline-block;
