@@ -32,7 +32,7 @@ body.animated-laurasima {
 }
 
 body.animated-slf-mastery {
-    background-color: #161616;
+    background-color: #1a1a1a;
     animation: fadeBackgroundBlack 0.8s ease-in-out;
 }
 
@@ -162,6 +162,53 @@ p {
 }
 
 /* Laurasima Styles */
+
+#laurasima.loading-screen.visible {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+    opacity: 1;
+    background-color: #fbfbfb;
+    transition: ease-out all 0.6s
+}
+
+#laurasima.loading-screen {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -900;
+    opacity: 0;    transition: ease-out all 0.6s
+}
+
+#laurasima.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #161616;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+
+} 
 
 body#laurasima {
     background-color: #fbfbfb;
@@ -696,6 +743,44 @@ a.back-btn:hover {
 
 /* Slf-Mastery Page Styles */
 
+#slf-mastery.loading-screen.visible {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+    opacity: 1;
+    background-color: #161616;
+    transition: ease-out all 0.6s
+}
+
+#slf-mastery.loading-screen {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -900;
+    opacity: 0;
+    transition: ease-out all 0.6s
+}
+
+#slf-mastery.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FF9E04;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
 body#slf-mastery {
     background-color: #1a1a1a;
     animation: fadeInAnimation ease 2s;
@@ -829,6 +914,44 @@ body#slf-mastery .visit-site:hover {
 }
 
 /* Fika Page Styles */
+
+#fika.loading-screen.visible {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+    opacity: 1;
+    background-color: #eeebe7;
+    transition: ease-out all 0.6s
+}
+
+#fika.loading-screen {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -900;
+    opacity: 0;
+    transition: ease-out all 0.6s
+}
+
+#fika.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #e57676;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
 
 body#fika {
     background-color: #eeebe7;

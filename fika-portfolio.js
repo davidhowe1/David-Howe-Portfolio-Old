@@ -7,10 +7,22 @@ let body = document.querySelector('body#fika')
 let laurasimaLink = document.querySelectorAll('a.laurasima')
 let slfMasteryLink = document.querySelectorAll('a.slf-mastery')
 let aboutLink = document.querySelector('a.fika')
-let mobileTitle = document.querySelector('.mobile-title')
 let about = document.getElementById('about')
 let home = document.querySelector('a.home')
+let loadingScreen = document.querySelector('#fika.loading-screen.visible')
+let pictures = document.querySelectorAll('img')
 
+for (let i = 0; i < pictures.length; i++) {
+    function removeLoadingScreen() {
+        loadingScreen.remove()
+    }
+
+    if ( document.readyState === 'complete') {
+        removeLoadingScreen()
+    } else {
+        pictures[i].addEventListener('load', removeLoadingScreen())
+    }
+}
 
 function fadeOutContent() {
     fadeOnClick()

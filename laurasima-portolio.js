@@ -1,7 +1,6 @@
 let backButton = document.getElementById('close-page')
 
 let pageElements = document.querySelectorAll('#element')
-console.log(pageElements)
 
 let a = document.querySelector('a.back-btn')
 let body = document.querySelector('body#laurasima')
@@ -9,6 +8,20 @@ let slfMasteryLink = document.querySelectorAll('a.slf-mastery')
 let fikaLink = document.querySelectorAll('a.fika')
 let about = document.getElementById('about')
 let home = document.querySelector('a.home')
+let loadingScreen = document.querySelector('#laurasima.loading-screen')
+let pictures = document.querySelectorAll('img')
+
+for (let i = 0; i < pictures.length; i++) {
+    function removeLoadingScreen() {
+        loadingScreen.remove()
+    }
+
+    if ( document.readyState === 'complete') {
+        removeLoadingScreen()
+    } else {
+        pictures[i].addEventListener('load', removeLoadingScreen())
+    }
+}
 
 function fadeOutContent() {
     fadeOnClick()
