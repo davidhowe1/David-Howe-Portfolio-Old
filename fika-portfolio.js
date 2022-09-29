@@ -142,6 +142,11 @@ function openOverlay() {
     let html = 
     `
     <div class="image-overlay">
+
+        <div class="overlay-loading-screen">
+            <span id="fika" class="loader" alt="loading..."></span>
+        </div>
+
         <div class="overlay-close">
             <button class="overlay-close">
                 <h1>&#10005</h1>
@@ -149,10 +154,10 @@ function openOverlay() {
         </div>
 
         <div class="image-wrapper">
-            <img class="mobile" src="${images[0]}" alt="Mobile merch page screenshot">
-            <img class="mobile" src="${images[1]}" alt="Mobile about page screenshot">
-            <img class="tablet" src="${images[2]}" alt="Tablet merch and cart page screenshot">
-            <img class="desktop" src="${images[3]}" alt="Desktop home page screenshot">
+            <img id="overlay-image" class="mobile" src="${images[0]}" alt="Mobile merch page screenshot">
+            <img id="overlay-image" class="mobile" src="${images[1]}" alt="Mobile about page screenshot">
+            <img id="overlay-image" class="tablet" src="${images[2]}" alt="Tablet merch and cart page screenshot">
+            <img id="overlay-image" class="desktop" src="${images[3]}" alt="Desktop home page screenshot">
         </div>
     </div>
     `
@@ -180,7 +185,7 @@ function fadeInImages() {
     function loadImages(i) {
         setTimeout(function() {
         imagesArray[i].classList.add('visible')
-    }, 400 * i)
+    }, 300 * i)
 }
 }
 
@@ -188,6 +193,15 @@ function ready() {
 
     let closeOverlayBtn = document.querySelector('button.overlay-close h1')
     let imageOverlay = document.querySelector('.image-overlay')
+    let imageWrapper = imageOverlay.querySelector('.image-wrapper')
+    let images = imageWrapper.querySelectorAll('#overlay-image')
+    let overlayLoader = document.querySelector('.overlay-loading-screen')
+
+    for (let i = 0; i < images.length; i++) {
+        images[i].addEventListener('load', function() {
+            overlayLoader.classList.add('hidden')
+        })
+    }
 
     closeOverlayBtn.addEventListener('click', closeOverlay)
 

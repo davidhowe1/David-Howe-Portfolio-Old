@@ -10,7 +10,6 @@ let about = document.getElementById('about')
 let home = document.querySelector('a.home')
 let loadingScreen = document.querySelector('#laurasima.loading-screen')
 let pictures = document.getElementsByTagName('img')
-console.log(loadingScreen)
 
 window.addEventListener('load', function() {
     loadingScreen.classList.add('hidden')
@@ -130,6 +129,11 @@ function openOverlay() {
     let html = 
     `
     <div class="image-overlay">
+
+        <div class="overlay-loading-screen">
+            <span id="laurasima" class="loader" alt="loading..."></span>
+        </div>
+
         <div class="overlay-close">
             <button class="overlay-close">
                 <h1>&#10005</h1>
@@ -137,14 +141,15 @@ function openOverlay() {
         </div>
 
         <div class="image-wrapper">
-            <img class="mobile" src="${images[0]}" alt="Mobile home page screenshot - Large">
-            <img class="mobile" src="${images[1]}" alt="Mobile portfolio page screenshot - Large">
-            <img class="tablet" src="${images[2]}" alt="Tablet portfolio overlay screenshot - Large">
-            <img class="desktop" src="${images[3]}" alt="Desktop home page screenshot - Large">
+            <img id="overlay-image" class="mobile" src="${images[0]}" alt="Mobile home page screenshot - Large">
+            <img id="overlay-image" class="mobile" src="${images[1]}" alt="Mobile portfolio page screenshot - Large">
+            <img id="overlay-image" class="tablet" src="${images[2]}" alt="Tablet portfolio overlay screenshot - Large">
+            <img id="overlay-image" class="desktop" src="${images[3]}" alt="Desktop home page screenshot - Large">
         </div>
     </div>
     `
     contentContainer.insertAdjacentHTML('beforeend', html)
+
 }
 
 imageContainer.addEventListener('click', function() {
@@ -161,21 +166,30 @@ function removeGalleryMessage() {
 function fadeInImages() {
     let imagesArray  = document.querySelectorAll('.image-wrapper img')
 
-    for (i = 0; i < imagesArray.length; i++) {
+    for (let i = 0; i < imagesArray.length; i++) {
         loadImages(i)
     }
 
     function loadImages(i) {
         setTimeout(function() {
         imagesArray[i].classList.add('visible')
-    }, 400 * i)
-}
+        }, 300 * i)
+    }
 }
 
 function ready() {
 
     let closeOverlayBtn = document.querySelector('button.overlay-close h1')
     let imageOverlay = document.querySelector('.image-overlay')
+    let imageWrapper = imageOverlay.querySelector('.image-wrapper')
+    let images = imageWrapper.querySelectorAll('#overlay-image')
+    let overlayLoader = document.querySelector('.overlay-loading-screen')
+
+    for (let i = 0; i < images.length; i++) {
+        images[i].addEventListener('load', function() {
+            overlayLoader.classList.add('hidden')
+        })
+    }
 
     closeOverlayBtn.addEventListener('click', closeOverlay)
 
