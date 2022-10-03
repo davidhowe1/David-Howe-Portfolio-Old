@@ -1,16 +1,19 @@
-let backButton = document.getElementById('close-page')
-
 let pageElements = document.querySelectorAll('#element')
 
 let a = document.querySelector('a.back-btn')
 let body = document.querySelector('body#fika')
 let laurasimaLink = document.querySelectorAll('a.laurasima')
 let slfMasteryLink = document.querySelectorAll('a.slf-mastery')
-let aboutLink = document.querySelector('a.fika')
+let aboutLink = document.querySelector('a.about-link')
 let about = document.getElementById('about')
-let home = document.querySelector('a.home')
+let projects = document.querySelector('a.home')
 let loadingScreen = document.querySelector('#fika.loading-screen')
 let pictures = document.querySelectorAll('img')
+let homeLink = document.querySelector('#home-link')
+
+let nonePortfolioLinks = [a,about,aboutLink,projects]
+
+console.log(nonePortfolioLinks)
 
 window.addEventListener('load', function() {
     loadingScreen.classList.add('hidden')
@@ -18,27 +21,40 @@ window.addEventListener('load', function() {
 
 function fadeOutContent() {
     fadeOnClick()
-    setTimeout(fadeInBackgroundWhite, 600)
+    setTimeout(fadeInBackgroundWhite, 1000)
 }
 
 for (i = 0; i < laurasimaLink.length; i++) {
 
-laurasimaLink[i].addEventListener('click', (e) => {
-    e.preventDefault()
-    let link = e.target.href
+    laurasimaLink[i].addEventListener('click', (e) => {
+        e.preventDefault()
+        let link = e.target.href
 
-    fadeOutContent()
-    setTimeout(fadeInBackgroundLaurasima, 800)
+        fadeOutContent()
+        setTimeout(fadeInBackgroundLaurasima, 800)
 
-    setTimeout(function() {
-        window.open(link, '_self')
-    }, 1800)
-})
+        setTimeout(function() {
+            window.open(link, '_self')
+        }, 1800)
+    })
 }
 
 for (i = 0; i < slfMasteryLink.length; i++) {
 
-slfMasteryLink[i].addEventListener('click', (e) => {
+    slfMasteryLink[i].addEventListener('click', (e) => {
+        e.preventDefault()
+        let link = e.target.href
+
+        fadeOutContent()
+        setTimeout(fadeInBackgroundSlfMastery, 800)
+
+        setTimeout(function() {
+            window.open(link, '_self')
+        }, 1800)
+    })
+}
+
+homeLink.addEventListener('click', (e) => {
     e.preventDefault()
     let link = e.target.href
 
@@ -49,52 +65,19 @@ slfMasteryLink[i].addEventListener('click', (e) => {
         window.open(link, '_self')
     }, 1800)
 })
+
+for (let i = 0; i < nonePortfolioLinks.length; i++) {
+    nonePortfolioLinks[i].addEventListener('click', (e) => {
+        e.preventDefault()
+        let link = e.target.href
+    
+        fadeOutContent()
+    
+        setTimeout(function() {
+            window.open(link, '_self')
+        }, 1800)
+    })
 }
-
-aboutLink.addEventListener('click', (e) => {
-    e.preventDefault()
-    let link = e.target.href
-
-    fadeOutContent()
-    setTimeout(fadeInBackgroundWhite, 300)
-
-    setTimeout(function() {
-        window.open(link, '_self')
-    }, 1800)
-})
-
-a.addEventListener('click', (e) => {
-    e.preventDefault()
-    let link = e.target.href
-
-    fadeOutContent()
-
-    setTimeout(function() {
-        window.open(link, '_self')
-    }, 1800)
-})
-
-about.addEventListener('click', (e) => {
-    e.preventDefault()
-    let link = e.target.href
-
-    fadeOutContent()
-
-    setTimeout(function() {
-        window.open(link, '_self')
-    }, 1800)
-})
-
-home.addEventListener('click', (e) => {
-    e.preventDefault()
-    let link = e.target.href
-
-    fadeOutContent()
-
-    setTimeout(function() {
-        window.open(link, '_self')
-    }, 1800)
-})
 
 // Fade out animation functions
 

@@ -1,5 +1,3 @@
-let backButton = document.getElementById('close-page')
-
 let pageElements = document.querySelectorAll('#element')
 let laurasimaLink = document.querySelectorAll('a.laurasima')
 let slfMasteryLink = document.querySelectorAll('a.slf-mastery')
@@ -8,7 +6,8 @@ let fikaLink = document.querySelectorAll('a.fika')
 let a = document.querySelector('a.back-btn')
 let about = document.querySelector('a#about')
 let body = document.querySelector('body#about')
-let home = document.querySelector('a.home')
+let projects = document.querySelector('a#home.home')
+let homeLink = document.querySelector('#home-link')
 
 function closeMenu() {
     mobileTitle.classList.toggle('hide')
@@ -70,7 +69,7 @@ a.addEventListener('click', (e) => {
     }, 1600)
 })
 
-home.addEventListener('click', (e) => {
+projects.addEventListener('click', (e) => {
     e.preventDefault()
     let link = e.target.href
 
@@ -79,6 +78,18 @@ home.addEventListener('click', (e) => {
     setTimeout(function() {
         window.open(link, '_self')
     }, 1800)
+})
+
+homeLink.addEventListener('click', (e) => {
+    e.preventDefault()
+    let link = e.target.href
+
+    fadeOnClick()
+    setTimeout(fadeInBackgroundSlfMastery, 300)
+
+    setTimeout(function() {
+        window.open(link, '_self')
+    }, 1600)
 })
 
 about.addEventListener('click', (e) => {

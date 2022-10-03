@@ -41,6 +41,15 @@ body.animated-fika {
     animation: fadeBackgroundFika 0.8s ease-in-out;
 }
 
+body.home {
+    background-color: #1a1a1a;
+}
+
+body.home.animated-home {
+    background-color: #ededed;
+    animation: fadeBackgroundWhite 0.5s ease-in-out;
+}
+
 .content-wrapper {
     width: 100%;
     margin: 0px;
@@ -48,6 +57,89 @@ body.animated-fika {
     justify-content: space-between;
     opacity: 1;
     animation: fadeInAnimation ease-in-out 0.5s ;
+}
+
+.hero-content-wrapper {
+    width: 100%;
+    padding-left: 100px;
+    box-sizing: border-box;
+}
+
+span.hero-text {
+    opacity: 1;
+    width: 1000px;
+    animation: heroTextFadeIn ease-in-out 1.5s;
+}
+
+span.hero-text.hide {
+    opacity: 0;
+    width: 1000px;
+    animation: heroTextFadeOut ease-out 0.35s;
+}
+
+@keyframes heroTextFadeIn {
+
+    0% {
+        transform: translateY(40px);
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+
+@keyframes heroTextFadeOut {
+
+    0% {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+
+    100% {
+        transform: translateY(-125px);
+        opacity: 0%;
+    }
+}
+
+#nav-buttons.home-button-container {
+    display: flex;
+    opacity: 0;
+    margin: 50px 0px 0px 0px;
+}
+
+#nav-buttons.home-button-container.loaded {
+    opacity: 1;
+    transition: all ease-out 1.5s;
+    margin: 50px 0px 0px 0px;
+}
+
+#nav-buttons.home-button-container.loaded.hide {
+    opacity: 0%;
+    transition: all ease-in-out 0.35s;
+    margin: 50px 0px 0px 0px;
+    animation: heroTextFadeOut 0.35s ease-out;
+}
+
+a.nav-button {
+    font-weight: 300;
+    font-size: 1rem;
+    color: #eeebe7;
+    background-color: transparent;
+    padding: 8px 13px;
+    margin: 0px 20px 0px 0px;
+    border: #e57676 solid 1px;
+}
+
+a.nav-button:hover {
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: #e57676;
+    color: #eeebe7;
+    padding: 8px 13px;
+    margin: 0px 20px 0px 0px;
+    border: #e57676 solid 1px;
 }
 
 .middle-menu {
@@ -66,7 +158,7 @@ body.animated-fika {
     transition: ease-in-out 0.5s;
 }
 
-.menu-items.hidden {
+.menu-items.hide {
     transition: all ease-in-out 0.5s;
     border-bottom: solid transparent 1px;
 }
@@ -161,6 +253,25 @@ p {
     margin: 20px 0px 20px 0px;
 }
 
+.hero-text {
+    display: flex;
+    flex-direction: row;
+}
+
+span.hero-text h1 {
+    color: #aeaeae;
+    font-weight: 300;
+    font-size: 3.5rem; 
+}
+
+span.hero-alt-font {
+    font-family: 'Montserrat', sans-serif;
+    color: #e57676;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 4rem;
+}
+
 /* Laurasima Styles */
 
 #laurasima.loading-screen {
@@ -204,6 +315,7 @@ p {
 }
 
 @keyframes rotation {
+
 0% {
     transform: rotate(0deg);
 }
@@ -579,24 +691,24 @@ body#laurasima .visit-site {
     padding: 8px;
     text-align: center;
     border: #161616 0.5px solid;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 300;
     color: #161616;
     background-color: #fbfbfb;
     transition: all ease-in-out 0.2s;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px 0px 0px;
 }
 
 body#laurasima .visit-site:hover {
     padding: 8px;
     text-align: center;
     border: #161616 0.5px solid;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 300;
     background-color: #161616;
     color: #fbfbfb;
     transition: all ease-in-out 0.2s;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px 0px 0px;
 }
 
 .button-container p {
@@ -650,6 +762,11 @@ a.back-btn:hover {
     height: 100%;
     padding: 0px 45px 0px 45px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.portfolio-button-container {
+    display: flex;
+    flex-direction: column;
 }
 
 #about .text-container {
@@ -848,11 +965,11 @@ body#slf-mastery .right-side-container {
 }
 
 body#slf-mastery .left-side-title {
-    box-shadow: rgba(0, 0, 0, 0.30) 0px 8px 24px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 24px;
 }
 
 body#slf-mastery .text-container {
-    box-shadow: rgba(0, 0, 0, 0.30) 0px 8px 24px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 24px;
 }
 
 #slf-mastery button.back {
@@ -900,24 +1017,24 @@ body#slf-mastery .visit-site {
     padding: 8px;
     text-align: center;
     border: #FF9E04 0.5px solid;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 300;
     color: #FF9E04;
     background-color: #161616;
     transition: all ease-in-out 0.2s;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px 0px 0px;
 }
 
 body#slf-mastery .visit-site:hover {
     padding: 8px;
     text-align: center;
     border: #161616 0.5px solid;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 300;
     background-color: #FF9E04;
     color: #161616;
     transition: all ease-in-out 0.2s;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px 0px 0px;
 }
 
 /* Fika Page Styles */
@@ -995,24 +1112,24 @@ body#fika .visit-site {
     padding: 8px;
     text-align: center;
     border: #161616 0.5px solid;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 300;
     color: #fbfbfb;
     background-color: #161616;
     transition: all ease-in-out 0.2s;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px 0px 0px;
 }
 
 body#fika .visit-site:hover {
     padding: 8px;
     text-align: center;
     border: #e57676 0.5px solid;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 300;
     background-color: #e57676;
     color: #fbfbfb;
     transition: all ease-in-out 0.2s;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px 0px 0px;
 }
 
 body#fika .page-menu {
@@ -1243,7 +1360,7 @@ footer {
     align-items: flex-end;
     padding: 20px 20px;
     animation: fadeInAnimation ease-in-out 0.5s;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 10px 50px;
 }
 
 body#laurasima .footer-wrapper {
@@ -1256,6 +1373,8 @@ body#laurasima .footer-wrapper {
 }
 
 .footer-wrapper .right-side {
+    display: flex;
+    flex-direction: row;
     padding: 0px;
     margin: 0px;
 }
@@ -1264,7 +1383,7 @@ body#laurasima .footer-wrapper {
     font-family: 'Roboto Mono', monospace;
     font-size: 0.8rem;
     padding: 0px;
-    margin: 0px;
+    margin: 10px;
 }
 
 .footer-wrapper .right-side h3 {
@@ -1295,6 +1414,12 @@ body#slf-mastery .footer-wrapper h3 a {
 
 body#fika .footer-wrapper {
     background-color: #eeebe7;
+}
+
+/* Home footer styles */
+
+body.home .footer-wrapper h2, body.home h3 a {
+    color: #949494;
 }
 
 /* Responsive Styles */
@@ -1420,7 +1545,42 @@ body#fika .footer-wrapper {
 
 @media screen and (max-width: 850px) {
 
-        .right-side-container::-webkit-scrollbar {
+    .hero-content-wrapper {
+        padding-left: 60px;
+    }
+    
+    span.hero-text {
+        width: 100%;
+        line-height: 5rem;
+    }
+    
+    span.hero-text.hide {
+        width: 100%;
+    }
+
+    span.hero-text h1 {
+        font-size: 3rem; 
+    }
+    
+    span.hero-alt-font {
+        font-family: 'Montserrat', sans-serif;
+        color: #e57676;
+        font-weight: 500;
+        font-style: italic;
+        font-size: 3.2rem;
+    }
+
+    a.nav-button {
+        font-size: 1.2rem;
+        padding: 18px 24px;
+    }
+    
+    a.nav-button:hover {
+        font-size: 1.2rem;
+        padding: 18px 24px;
+    }
+
+    .right-side-container::-webkit-scrollbar {
         display: none;
     }
 
@@ -1558,6 +1718,16 @@ body#fika .footer-wrapper {
         border-top: solid 0.5px #dbdbdb;
     }
 
+    .portfolio-button-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    body#laurasima .visit-site, body#slf-mastery .visit-site, body#fika .visit-site  {
+        width: 100%;
+        margin: 25px 10px 0px 10px;
+    }
+
     .text-container h1 {
         font-size: 2rem;
     }
@@ -1676,6 +1846,7 @@ body#fika .footer-wrapper {
     body#about #element.mobile-title h1.title {
         font-size: 1.6rem;
     }
+
 }
 
 /* Mobile Styles */
@@ -1688,6 +1859,37 @@ body#fika .footer-wrapper {
         justify-content: space-between;
         width: 100%;
         box-sizing: border-box;
+    }
+
+    .hero-content-wrapper {
+        padding-left: 40px;
+    }
+    
+    span.hero-text {
+        width: 85%;
+        line-height: 3.5rem;
+    }
+    
+    span.hero-text.hide {
+        width: 80%;
+    }
+
+    span.hero-text h1 {
+        font-size: 2rem; 
+    }
+    
+    span.hero-alt-font {
+        font-size: 2.5rem;
+    }
+
+    a.nav-button {
+        font-size: 1rem;
+        padding: 8px 13px;
+    }
+    
+    a.nav-button:hover {
+        font-size: 1rem;
+        padding: 8px 13px;
     }
 
     #close-page.button-container {
@@ -1899,6 +2101,12 @@ body#fika .footer-wrapper {
         z-index: 1;
     }
 
+    body#laurasima .visit-site, body#slf-mastery .visit-site, body#fika .visit-site {
+        width: 100%;
+        margin: 15px 5px 20px 5px;
+        font-size: 0.8rem;
+    }
+
     body#slf-mastery .text-container {
         border-top: solid 0.5px #2a2a2a;
     }
@@ -1954,6 +2162,8 @@ body#fika .footer-wrapper {
         display: none;
     }
 
+    /* Mobile footer styles */
+
     /* Mobile Text Styles */
 
     .text-container h1 {
@@ -1974,11 +2184,11 @@ body#fika .footer-wrapper {
     }
 
     .left-side h2 {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
 
     .footer-wrapper .right-side h3 a {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
 
     .menu-item h1 {
