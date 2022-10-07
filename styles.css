@@ -215,40 +215,55 @@ a.nav-button:hover {
 
 .portfolio-preview-image-container:hover .preview-text-container {
     opacity: 100%;
-    transition: all ease-in-out 0.2s;
-    -webkit-transition: all ease-in 0.2s;
+    transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-in 0.3s;
 }
 
 .portfolio-preview-image-container:hover {
-    background-size: cover;
-    transition: all ease-in-out 0.2s;
-    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-out 0.3s;
+}
+
+.portfolio-preview-image-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.portfolio-preview-image-container img {
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+    object-fit:cover;
+    box-shadow: none;
+    opacity: 100%;
+    transition: all ease-in-out 0.4s;
+    -webkit-transition: all ease-out 0.4s;
+    position: absolute;
+}
+
+.portfolio-preview-image-container .preview-text-container {
+    position: absolute;
+    bottom: 0px;
+}
+
+.portfolio-preview-image-container img:hover {
+    opacity: 0%;
+    transition: all ease-in-out 0.4s;
+    -webkit-transition: all ease-out 0.4s;
 }
 
 #laurasima.portfolio-preview-image-container {
     background-image: url(pictures/portfolio-previews/hover-images/laurasima-preview-image.png);
-    background-image: url(pictures/portfolio-previews/laurasima-preview-image.png);
 }
 
 #slf-mastery.portfolio-preview-image-container {
-    background-image: url(pictures/portfolio-previews/hover-images/laurasima-preview-image.png);
-    background-image: url(pictures/portfolio-previews/slf-mastery-preview-image.png);
-}
-
-#fika.portfolio-preview-image-container {
-    background-image: url(pictures/portfolio-previews/hover-images/fika-6.png);
-    background-image: url(pictures/portfolio-previews/fika-preview-image.png);
-}
-
-#laurasima.portfolio-preview-image-container:hover {
-    background-image: url(pictures/portfolio-previews/hover-images/laurasima-preview-image.png);
-}
-
-#slf-mastery.portfolio-preview-image-container:hover {
     background-image: url(pictures/portfolio-previews/hover-images/usman-1.png);
 }
 
-#fika.portfolio-preview-image-container:hover {
+#fika.portfolio-preview-image-container {
     background-image: url(pictures/portfolio-previews/hover-images/fika-6.png);
 }
 
