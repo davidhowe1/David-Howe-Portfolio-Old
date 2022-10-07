@@ -1,19 +1,8 @@
-let pageElements = document.querySelectorAll('#element')
 let laurasimaLink = document.querySelectorAll('a.laurasima')
 let slfMasteryLink = document.querySelectorAll('a.slf-mastery')
 let fikaLink = document.querySelectorAll('a.fika')
 
-let a = document.querySelector('a.back-btn')
-let about = document.querySelector('a#about')
-let body = document.querySelector('body#about')
-let projects = document.querySelector('a#home.home')
-let homeLink = document.querySelector('#home-link')
-
-function closeMenu() {
-    mobileTitle.classList.toggle('hide')
-}
-
-for (i = 0; i < laurasimaLink.length; i++) {
+for (let i = 0; i < laurasimaLink.length; i++) {
 
     laurasimaLink[i].addEventListener('click', (e) => {
         e.preventDefault()
@@ -28,7 +17,7 @@ for (i = 0; i < laurasimaLink.length; i++) {
     })
     }
 
-for (i = 0; i < slfMasteryLink.length; i++) {
+for (let i = 0; i < slfMasteryLink.length; i++) {
 
     slfMasteryLink[i].addEventListener('click', (e) => {
         e.preventDefault()
@@ -43,7 +32,7 @@ for (i = 0; i < slfMasteryLink.length; i++) {
     })
     }
     
-for (i = 0; i < fikaLink.length; i++) {
+for (let i = 0; i < fikaLink.length; i++) {
 
     fikaLink[i].addEventListener('click', (e) => {
         e.preventDefault()
@@ -57,28 +46,26 @@ for (i = 0; i < fikaLink.length; i++) {
         }, 1600)
     })
 }
-    
-a.addEventListener('click', (e) => {
-    e.preventDefault()
-    let link = e.target.href
 
-    fadeOnClick()
+let a = document.querySelector('a.back-btn')
+let about = document.querySelector('a#about')
+let projects = document.querySelector('a#home.home')
+let nonePortfolioLinks = [a,about,projects]
 
-    setTimeout(function() {
-        window.open(link, '_self')
-    }, 1600)
-})
+for (let i = 0; i < nonePortfolioLinks.length; i++) {
+    nonePortfolioLinks[i].addEventListener('click', (e) => {
+        e.preventDefault()
+        let link = e.target.href
 
-projects.addEventListener('click', (e) => {
-    e.preventDefault()
-    let link = e.target.href
+        fadeOnClick()
 
-    fadeOnClick()
+        setTimeout(function() {
+            window.open(link, '_self')
+        }, 1600)
+    })
+}
 
-    setTimeout(function() {
-        window.open(link, '_self')
-    }, 1800)
-})
+let homeLink = document.querySelector('#home-link')
 
 homeLink.addEventListener('click', (e) => {
     e.preventDefault()
@@ -92,18 +79,9 @@ homeLink.addEventListener('click', (e) => {
     }, 1600)
 })
 
-about.addEventListener('click', (e) => {
-    e.preventDefault()
-    let link = e.target.href
-
-    fadeOnClick()
-
-    setTimeout(function() {
-        window.open(link, '_self')
-    }, 1600)
-})
-
 // Fade out animation functions
+
+let pageElements = document.querySelectorAll('#element')
 
 function fadeOnClick() {
     for (i = 0; i < pageElements.length; i++) {
@@ -116,6 +94,8 @@ function fadeOnClick() {
         }, 75 * i)
     }
 }
+
+let body = document.querySelector('body#about')
 
 function fadeInBackgroundWhite() {
     body.classList.toggle('animated-laurasima')

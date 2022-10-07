@@ -1,17 +1,7 @@
-let pageElements = document.querySelectorAll('#element')
-
-let a = document.querySelector('a.back-btn')
-let body = document.querySelector('body#laurasima')
 let slfMasteryLink = document.querySelectorAll('a.slf-mastery')
 let fikaLink = document.querySelectorAll('a.fika')
-let about = document.getElementById('about')
-let aboutLink = document.querySelector('a.about-link')
-let projects = document.querySelector('a.home')
-let loadingScreen = document.querySelector('#laurasima.loading-screen')
-let pictures = document.getElementsByTagName('img')
-let homeLink = document.querySelector('#home-link')
 
-let nonePortfolioLinks = [a,about,aboutLink,projects]
+let loadingScreen = document.querySelector('#laurasima.loading-screen')
 
 window.addEventListener('load', function() {
     loadingScreen.classList.add('hidden')
@@ -52,6 +42,8 @@ for (i = 0; i < fikaLink.length; i++) {
     })
 }
 
+let homeLink = document.querySelector('#home-link')
+
 homeLink.addEventListener('click', (e) => {
     e.preventDefault()
     let link = e.target.href
@@ -63,6 +55,12 @@ homeLink.addEventListener('click', (e) => {
         window.open(link, '_self')
     }, 1800)
 })
+
+let a = document.querySelector('a.back-btn')
+let about = document.getElementById('about')
+let aboutLink = document.querySelector('a.about-link')
+let projects = document.querySelector('a.home')
+let nonePortfolioLinks = [a,about,aboutLink,projects]
 
 for (let i = 0; i < nonePortfolioLinks.length; i++) {
 
@@ -80,6 +78,9 @@ for (let i = 0; i < nonePortfolioLinks.length; i++) {
 }
 
 // Fade out animation functions
+
+let body = document.querySelector('body#laurasima')
+let pageElements = document.querySelectorAll('#element')
 
 function fadeInBackgroundWhite() {
     body.classList.toggle('animated-laurasima')

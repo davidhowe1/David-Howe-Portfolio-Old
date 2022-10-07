@@ -1,8 +1,5 @@
 let mobileMenu = document.querySelector('.mobile-menu')
-let closeMenuMobile = document.querySelector('h1.close-menu')
 let menu = document.querySelector('.mobile-menu-full')
-let mobileMenuItems = document.querySelectorAll('.mobile-menu-items h3 a')
-let menuVisible = document.getElementById('mobile-menu-full')
 
 mobileMenu.addEventListener('click', openMenu)
 
@@ -16,6 +13,7 @@ function openMenu() {
     mobileMenu.classList.add('hidden')
 }
 
+let closeMenuMobile = document.querySelector('h1.close-menu')
 closeMenuMobile.addEventListener('click', closeMobileMenu)
 
 function closeMobileMenu() {
@@ -25,6 +23,8 @@ function closeMobileMenu() {
     setTimeout(lowerZIndex, 400)
 }
 
+let menuVisible = document.getElementById('mobile-menu-full')
+
 function raiseZIndex() {
     menuVisible.style.zIndex = '5'
 }
@@ -32,6 +32,8 @@ function raiseZIndex() {
 function lowerZIndex() {
     menuVisible.style.zIndex = '0'
 }
+
+let mobileMenuItems = document.querySelectorAll('.mobile-menu-items h3 a')
 
 for (i = 0; i < mobileMenuItems.length; i++) {
     let items = mobileMenuItems[i]

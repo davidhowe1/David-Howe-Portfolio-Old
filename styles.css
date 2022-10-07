@@ -14,7 +14,6 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
     width: 100%;
     background-color: #ededed;
@@ -52,15 +51,21 @@ body.home.animated-home {
 
 .content-wrapper {
     width: 100%;
+    height: 100%;
     margin: 0px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     opacity: 1;
-    animation: fadeInAnimation ease-in-out 0.5s ;
+    animation: fadeInAnimation ease-in-out 1s;
 }
 
 .hero-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
+    height: 100%;
     padding-left: 100px;
     box-sizing: border-box;
 }
@@ -74,7 +79,7 @@ span.hero-text {
 span.hero-text.hide {
     opacity: 0;
     width: 1000px;
-    animation: heroTextFadeOut ease-out 0.35s;
+    animation: heroTextFadeOut ease-out 0.45s;
 }
 
 @keyframes heroTextFadeIn {
@@ -98,7 +103,7 @@ span.hero-text.hide {
     }
 
     100% {
-        transform: translateY(-125px);
+        transform: translateY(-65px);
         opacity: 0%;
     }
 }
@@ -119,12 +124,22 @@ span.hero-text.hide {
     opacity: 0%;
     transition: all ease-in-out 0.35s;
     margin: 50px 0px 0px 0px;
-    animation: heroTextFadeOut 0.35s ease-out;
+    animation: heroTextFadeOut 0.45s ease-out;
+}
+
+img#download-icon {
+    width: 23px;
+    height: 23px;
+    background-color: none;
+    margin: 0px 4px 0px 0px;
 }
 
 a.nav-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #eeebe7;
     background-color: transparent;
     padding: 8px 13px;
@@ -133,8 +148,10 @@ a.nav-button {
 }
 
 a.nav-button:hover {
+    display: flex;
+    flex-direction: row;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.1rem;
     background-color: #e57676;
     color: #eeebe7;
     padding: 8px 13px;
@@ -142,49 +159,97 @@ a.nav-button:hover {
     border: #e57676 solid 1px;
 }
 
-.middle-menu {
-    display: flex;
-    width: 100%;
-    position: relative;
-    justify-content: center;
-}
-
 .menu-items {
     display: flex;
-    width: 60%;
+    width: 100%;
     flex-direction: row;
-    justify-content: space-between;
-    border-bottom: #2a2a2a solid 0.5px;
     transition: ease-in-out 0.5s;
 }
 
-.menu-items.hide {
-    transition: all ease-in-out 0.5s;
-    border-bottom: solid transparent 1px;
-}
-
-.menu-item.hide > h1 a {
-    cursor: pointer;
+.portfolio-preview-images {
     display: flex;
-    position: relative;
-    transition: all ease-in-out 0.6s;
-    color: #ededed;
-    opacity: 0;
+    flex-direction: row;
+    justify-content: center;
 }
 
-#laurasima.menu-item.hide:hover > h1 a {
-    color: transparent;
-    transition: all ease-in-out 0.6s;
+.portfolio-preview-image-container {
+    display: flex;
+    opacity: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px;
+    height: 30vh;
+    width: 30vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 2px 24px;
+    transition: all ease-in-out 0.3s;
 }
 
-#slf-mastery.menu-item.hide:hover > h1 a.slf-mastery {
-    color: transparent;
-    transition: all ease-in-out 0.6s;
+.portfolio-preview-image-container.hide {
+    opacity: 0%;
 }
 
-#fika.menu-item.hide:hover > h1 a {
-    color: transparent;
-    transition: all ease-in-out 0.6s;
+.preview-text-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #fbfbfb;
+    opacity: 0%;
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 2px 24px;
+    transition: all ease-in-out 0.3s;
+}
+
+.preview-text-container h1 {
+    font-size: 1rem;
+    margin: 18px;
+}
+
+.preview-text-container p {
+    margin: 18px;
+}
+
+.portfolio-preview-image-container:hover .preview-text-container {
+    opacity: 100%;
+    transition: all ease-in-out 0.2s;
+    -webkit-transition: all ease-in 0.2s;
+}
+
+.portfolio-preview-image-container:hover {
+    background-size: cover;
+    transition: all ease-in-out 0.2s;
+    -webkit-transition: all ease-out 0.2s;
+}
+
+#laurasima.portfolio-preview-image-container {
+    background-image: url(pictures/portfolio-previews/hover-images/laurasima-preview-image.png);
+    background-image: url(pictures/portfolio-previews/laurasima-preview-image.png);
+}
+
+#slf-mastery.portfolio-preview-image-container {
+    background-image: url(pictures/portfolio-previews/hover-images/laurasima-preview-image.png);
+    background-image: url(pictures/portfolio-previews/slf-mastery-preview-image.png);
+}
+
+#fika.portfolio-preview-image-container {
+    background-image: url(pictures/portfolio-previews/hover-images/fika-6.png);
+    background-image: url(pictures/portfolio-previews/fika-preview-image.png);
+}
+
+#laurasima.portfolio-preview-image-container:hover {
+    background-image: url(pictures/portfolio-previews/hover-images/laurasima-preview-image.png);
+}
+
+#slf-mastery.portfolio-preview-image-container:hover {
+    background-image: url(pictures/portfolio-previews/hover-images/usman-1.png);
+}
+
+#fika.portfolio-preview-image-container:hover {
+    background-image: url(pictures/portfolio-previews/hover-images/fika-6.png);
 }
 
 .mobile-title {
@@ -250,7 +315,7 @@ h3 {
 
 p {
     font-size: 0.9rem;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px 0px 0px;
 }
 
 .hero-text {
@@ -696,7 +761,6 @@ body#laurasima .visit-site {
     color: #161616;
     background-color: #fbfbfb;
     transition: all ease-in-out 0.2s;
-    margin: 20px 0px 0px 0px;
 }
 
 body#laurasima .visit-site:hover {
@@ -708,7 +772,6 @@ body#laurasima .visit-site:hover {
     background-color: #161616;
     color: #fbfbfb;
     transition: all ease-in-out 0.2s;
-    margin: 20px 0px 0px 0px;
 }
 
 .button-container p {
@@ -764,9 +827,29 @@ a.back-btn:hover {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+.technology-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0px 0px 0px 0px;
+    align-items: center;
+}
+
+.technology-logos img {
+    height: 35px;
+    width: 35px;
+    margin: 0px 0px;
+    box-shadow: none;
+}
+
 .portfolio-button-container {
     display: flex;
     flex-direction: column;
+    margin: 20px 0px 0px 0px;
+}
+
+.portfolio-button-container :nth-child(1) {
+    margin: 0px 0px 20px 0px;
 }
 
 #about .text-container {
@@ -909,7 +992,7 @@ body#slf-mastery {
     animation: fadeInAnimation ease 2s;
 }
 
-body#slf-mastery img {
+body#slf-mastery .right-side-container img {
     box-shadow: rgba(0, 0, 0, 0.23) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
 
@@ -941,7 +1024,7 @@ h1#slf-mastery {
 }
 
 body#slf-mastery p {
-    color: #ededed;
+    color: #aeaeae;
 }
 
 body#slf-mastery .page-menu p {
@@ -1016,13 +1099,12 @@ body#slf-mastery .page-menu h3 a:hover {
 body#slf-mastery .visit-site {
     padding: 8px;
     text-align: center;
-    border: #FF9E04 0.5px solid;
+    border: #8b5500 0.5px solid;
     font-size: 1rem;
     font-weight: 300;
     color: #FF9E04;
     background-color: #161616;
     transition: all ease-in-out 0.2s;
-    margin: 20px 0px 0px 0px;
 }
 
 body#slf-mastery .visit-site:hover {
@@ -1034,7 +1116,6 @@ body#slf-mastery .visit-site:hover {
     background-color: #FF9E04;
     color: #161616;
     transition: all ease-in-out 0.2s;
-    margin: 20px 0px 0px 0px;
 }
 
 /* Fika Page Styles */
@@ -1117,7 +1198,6 @@ body#fika .visit-site {
     color: #fbfbfb;
     background-color: #161616;
     transition: all ease-in-out 0.2s;
-    margin: 20px 0px 0px 0px;
 }
 
 body#fika .visit-site:hover {
@@ -1129,7 +1209,6 @@ body#fika .visit-site:hover {
     background-color: #e57676;
     color: #fbfbfb;
     transition: all ease-in-out 0.2s;
-    margin: 20px 0px 0px 0px;
 }
 
 body#fika .page-menu {
@@ -1539,6 +1618,19 @@ body.home .footer-wrapper h2, body.home h3 a {
         grid-template-rows: 90% 10%;
         padding: 0px 15px;
     }
+
+    .portfolio-preview-images {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .portfolio-preview-image-container {
+        margin: 10px;
+        height: 27vh;
+        width: 450px;
+    }
 }
 
 /* Tablet Styles */
@@ -1609,6 +1701,14 @@ body.home .footer-wrapper h2, body.home h3 a {
         margin-right: 3px;
     }
 
+    .portfolio-button-container :nth-child(1) {
+        margin: 0px 5px 0px 0px;
+    }
+    
+    .portfolio-button-container :nth-child(2) {
+        margin: 0px 0px 0px 5px;
+    }
+
     .button-container {
         display: flex;
         flex-direction: row;
@@ -1625,10 +1725,6 @@ body.home .footer-wrapper h2, body.home h3 a {
 
     .button-container p {
         display: flex;
-    }
-
-    .top-line {
-        margin-bottom: 10px;
     }
 
     .scroll-alert {
@@ -1721,11 +1817,23 @@ body.home .footer-wrapper h2, body.home h3 a {
     .portfolio-button-container {
         flex-direction: row;
         justify-content: space-evenly;
+        margin-bottom: 20px;
     }
 
     body#laurasima .visit-site, body#slf-mastery .visit-site, body#fika .visit-site  {
         width: 100%;
-        margin: 25px 10px 0px 10px;
+    }
+
+    .technology-logos img {
+        height: 25px;
+        width: 25px;
+        margin: 10px 0px 5px 0px;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .technology-logos :nth-child(2) {
+        margin: 10px 5px 5px 5px;
     }
 
     .text-container h1 {
@@ -1916,6 +2024,20 @@ body.home .footer-wrapper h2, body.home h3 a {
         height: 93vh;
     }
 
+    .portfolio-preview-images {
+        margin: 0px 40px;
+    }
+
+    .portfolio-preview-images a {
+        width: 100%;
+    }
+    
+    .portfolio-preview-image-container {
+        margin: 5px;
+        height: 23vh;
+        width: 100%;
+    }
+
     .content-1 {
         display: flex;
         justify-content: flex-start;
@@ -1949,7 +2071,6 @@ body.home .footer-wrapper h2, body.home h3 a {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 10px;
     }
 
     .top-line .scroll-alert {
@@ -2077,6 +2198,14 @@ body.home .footer-wrapper h2, body.home h3 a {
         text-justify: center;
     }
 
+    .preview-text-container h1 {
+        font-size: 0.8rem;
+    }
+
+    .preview-text-container p {
+        font-size: 0.7rem;
+    }
+
     /* End of mobile header and menu styles */
 
     .left-side-title {
@@ -2103,7 +2232,6 @@ body.home .footer-wrapper h2, body.home h3 a {
 
     body#laurasima .visit-site, body#slf-mastery .visit-site, body#fika .visit-site {
         width: 100%;
-        margin: 15px 5px 20px 5px;
         font-size: 0.8rem;
     }
 
