@@ -1,8 +1,12 @@
+let loadingScreen = document.querySelector('#laurasima.loading-screen')
+
+window.addEventListener('load', function() {
+    loadingScreen.classList.add('hidden')
+})
+
 let laurasimaLink = document.querySelector('a.laurasima')
 let slfMasteryLink = document.querySelector('a.slf-mastery')
 let fikaLink = document.querySelector('a.fika')
-
-console.log(laurasimaLink,slfMasteryLink,fikaLink)
 
 laurasimaLink.addEventListener('click', (e) => {
     e.preventDefault()
@@ -73,8 +77,6 @@ let slfMastery = document.getElementById('slf-mastery')
 let fika = document.getElementById('fika')
 let footer = document.querySelector('.footer-wrapper')
 const menuItems = [laurasima,slfMastery,fika,footer]
-
-console.log(menuItems)
 
 function fadeOutMenu() {
 
