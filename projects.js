@@ -1,4 +1,4 @@
-let loadingScreen = document.querySelector('#laurasima.loading-screen')
+let loadingScreen = document.querySelector('.loading-screen')
 
 window.addEventListener('load', function() {
     loadingScreen.classList.add('hidden')
