@@ -352,6 +352,47 @@ span.hero-alt-font {
     font-size: 4rem;
 }
 
+
+.loading-screen {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 900;
+    opacity: 1;
+    background-color: #ededed;
+}
+
+.loading-screen.hidden {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -900;
+    opacity: 0;
+    background-color: transparent;
+    transition: ease-in all 0.3s;
+}
+
+span.loader {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #161616;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
 /* Laurasima Styles */
 
 #laurasima.loading-screen {
@@ -1594,6 +1635,10 @@ body.home .footer-wrapper h2, body.home h3 a {
         align-items: center;  
     }
 
+    .page-menu p {
+        margin: 0px;
+    }
+
     body#fika .page-menu h3 > a {
         font-size: 0.8rem;
         height: 15px;
@@ -1646,6 +1691,7 @@ body.home .footer-wrapper h2, body.home h3 a {
         height: 27vh;
         width: 450px;
     }
+
 }
 
 /* Tablet Styles */
